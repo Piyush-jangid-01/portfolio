@@ -123,6 +123,7 @@
   scale: 1.08;
   background: linear-gradient(135deg, #5f37fc, #8d4dfb);
   box-shadow: 0 0 30px rgba(82, 39, 255, 0.6);
+  cursor: pointer;
 }
 
 .bubble-menu .logo-bubble:hover .logo-content {
@@ -135,12 +136,12 @@
 
 @media (min-width: 768px) {
   .bubble-menu .bubble {
-    --bubble-size: 56px;
+    --bubble-size: 45px;
   }
 
   .bubble-menu .logo-bubble {
-    --bubble-size: 65px;
-    padding: 0 38px;
+    --bubble-size: 53px;
+    padding: 0 28px;
   }
 }
 
@@ -205,10 +206,10 @@
   --pill-color: #111;
   --pill-border: rgba(0, 0, 0, 0.12);
   --item-rot: 0deg;
-  --pill-min-h: 160px;
+  --pill-min-h: 135px;
   --hover-bg: #f3f4f6;
   --hover-color: #111;
-  width: 100%;
+  width: 98%;
   min-height: var(--pill-min-h);
   padding: clamp(1.5rem, 3vw, 8rem) 0;
   font-size: clamp(1.5rem, 4vw, 4rem);
