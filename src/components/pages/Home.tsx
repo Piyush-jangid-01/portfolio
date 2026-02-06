@@ -1,7 +1,11 @@
 import { useEffect } from "react";
 import TiltedCard from "../ui/TiltedCard";
-import CurvedLoop from "../ui/CurvedLoop";
+import ScrollVelocity from "../ui/ScrollVelocity";
 import avatar from "../../assets/avatar.png";
+import image1 from "../../assets/image1.png";
+import image2 from "../../assets/image2.png";
+import image3 from "../../assets/image3.png";
+import image4 from "../../assets/image4.png";  
 import "./Home.css";
 
 const Home = () => {
@@ -12,66 +16,79 @@ const Home = () => {
   }, []);
 
   return (
-    <section id="home" className="home">
-      <h1 className="home-title">
-        Hi, I’m <span>Piyush</span>
-      </h1>
+    <>
+      <section id="home" className="home">
+        <h1 className="home-title">
+          Hi, I’m <span>Piyush</span>
+        </h1>
 
-      <div className="home-layout">
-        <div className="home-left">
-          <p className="home-description">
-            I design and build modern, interactive web experiences using
-            <strong>
-              {" "}
-              React, TypeScript, animations and creative UI systems
-            </strong>
-            .
-          </p>
-        </div>
+        <div className="home-layout">
+          <div className="home-left">
+            <p className="home-description">
+              I design and build modern, interactive web experiences using
+              <strong>
+                {" "}
+                React, TypeScript, animations and creative UI systems
+              </strong>
+              .
+            </p>
+          </div>
 
-        <div className="home-avatar">
-          <TiltedCard
-            imageSrc={avatar}
-            containerHeight="490px"
-            containerWidth="490px"
-            imageHeight="490px"
-            imageWidth="490px"
-            rotateAmplitude={12}
-            scaleOnHover={1.08}
-            showMobileWarning={false}
-            showTooltip={false}
-            displayOverlayContent={false}
-          />
+          <div className="home-avatar">
+            <TiltedCard
+              imageSrc={avatar}
+              containerHeight="490px"
+              containerWidth="490px"
+              imageHeight="490px"
+              imageWidth="490px"
+              rotateAmplitude={12}
+              scaleOnHover={1.08}
+              showMobileWarning={false}
+              showTooltip={false}
+              displayOverlayContent={false}
+            />
+          </div>
+          <div className="home-right">
+            <button
+              className="home-contact-btn"
+              onMouseMove={(e) => {
+                const rect = e.currentTarget.getBoundingClientRect();
+                e.currentTarget.style.setProperty(
+                  "--x",
+                  `${e.clientX - rect.left}px`,
+                );
+                e.currentTarget.style.setProperty(
+                  "--y",
+                  `${e.clientY - rect.top}px`,
+                );
+              }}
+            >
+              Contact Me
+            </button>
+          </div>
         </div>
-        <div className="home-right">
-          <button
-            className="home-contact-btn"
-            onMouseMove={(e) => {
-              const rect = e.currentTarget.getBoundingClientRect();
-              e.currentTarget.style.setProperty(
-                "--x",
-                `${e.clientX - rect.left}px`,
-              );
-              e.currentTarget.style.setProperty(
-                "--y",
-                `${e.clientY - rect.top}px`,
-              );
-            }}
-          >
-            Contact Me
-          </button>
-        </div>
-      </div>
-
-      <CurvedLoop
-        marqueeText="Be ✦ Creative ✦ With ✦ React ✦ Bits ✦"
-        speed={2}
-        curveAmount={200}
-        direction="right"
-        interactive
-        className="curved-loop-text"
-      />
-    </section>
+      </section>
+      <section className="sec1">
+        <ScrollVelocity
+          items={[
+            { type: "text", content: "DESIGN ✦ MOTION ✦ CODE ✦ EXPERIENCE ✦" },
+            { type: "text", content: "DESIGN ✦ MOTION ✦ CODE ✦ EXPERIENCE ✦" },
+            {
+              type: "image",
+              images: [image1, image2, image3, image4],
+              imageWidth: 350,
+              imageHeight: 230,
+            }
+          ]}
+          velocity={100}
+          damping={50}
+          stiffness={400}
+          numCopies={100}
+          velocityMapping={{ input: [0, 1000], output: [0, 5] }}
+        />
+      </section>
+       
+    </>
   );
 };
 

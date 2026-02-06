@@ -1,9 +1,18 @@
+.body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000000;
+}
+
 .home {
-  min-height: 100vh;
-  min-width: 88.9vw;
+  min-height: 70vh;
+  width: 96.365vw;
+  box-sizing: border-box;
   background-color: #000000;
   color: #ffffff;
-  padding: 6rem 4rem 3rem;
+  padding: 6rem 3rem 0.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -17,6 +26,8 @@
   position: relative;
   top: -30px;
   z-index: 1;
+  cursor: none;
+  pointer-events: none;
 }
 
 .home-title span {
@@ -38,15 +49,24 @@
   max-width: 290px;
   z-index: 2;
 }
-
+.sec1 {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 96.365vw;
+    height: auto;
+    padding-bottom: 60px;
+    z-index: 0;
+    background-color: #000000;
+}
 .home-description {
   font-family: "Inter", sans-serif;
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   line-height: 1.2;
   color: #cfcfcf;
   margin-bottom: 2.5rem;
   position: relative;
-  top: -120px;
+  top: -110px;
 }
 
 .home-description strong {
@@ -135,13 +155,6 @@
   z-index: 3;
 }
 
-.curved-loop-text {
-  font-family: "Space Grotesk", sans-serif;
-  font-size: 4rem;
-  letter-spacing: 0.18em;
-  font-weight: 700;
-  margin-top: 8rem;
-}
 
 @media (max-width: 900px) {
   .home-layout {
