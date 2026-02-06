@@ -7,6 +7,7 @@ import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.png";  
 import "./Home.css";
+import About from "./About";
 
 const Home = () => {
   useEffect(() => {
@@ -83,9 +84,13 @@ const Home = () => {
           velocity={100}
           damping={50}
           stiffness={400}
-          numCopies={100}
+          numCopies={8}
           velocityMapping={{ input: [0, 1000], output: [0, 5] }}
         />
+      </section>
+      <section style={{height: "53vh"}}></section>
+      <section  className="about-section" id="about">
+        <About />
       </section>
        
     </>

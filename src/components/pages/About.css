@@ -1,7 +1,6 @@
 .about-section{
-    position: absolute;
-    width: 97vw;
-    height: 150vh;
+    width: 98.85vw;
+    height: 100vh;
     background-color: black;
-    border: 2px solid white;
+    color: white;
 }

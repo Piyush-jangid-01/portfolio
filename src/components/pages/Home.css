@@ -8,11 +8,11 @@
 
 .home {
   min-height: 70vh;
-  width: 96.365vw;
+  width: 98.85vw;
   box-sizing: border-box;
   background-color: #000000;
   color: #ffffff;
-  padding: 6rem 3rem 0.5rem;
+  padding: 6rem 3.5rem 0.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -53,11 +53,16 @@
     position: absolute;
     top: 100vh;
     left: 0;
-    width: 96.365vw;
+    width: 98.85vw;
     height: auto;
     padding-bottom: 60px;
-    z-index: 0;
+    z-index: 1;
     background-color: #000000;
+}
+
+.about-section{
+    position: absolute;
+    z-index: 0;
 }
 .home-description {
   font-family: "Inter", sans-serif;
@@ -85,7 +90,7 @@
   font-weight: 600;
   letter-spacing: 0.04em;
   position: relative;
-  left: 40vw;
+  left: 39vw;
   top: -120px;
   cursor: pointer;
   border: none;
