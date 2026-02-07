@@ -1,6 +1,38 @@
-.about-section{
-    width: 98.85vw;
-    height: 100vh;
-    background-color: black;
-    color: white;
+.about-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+  color: white;
+  overflow: hidden;
+}
+
+/* Shared blob styles */
+.blob {
+  position: absolute;
+  filter: saturate(1.3) contrast(1.15);
+  will-change: transform;
+  will-change: transform, opacity;
+  pointer-events: none;
+}
+
+/* Sizes only */
+.blob1 {
+  width: 220px;
+  height: 220px;
+}
+
+.blob2 {
+  width: 250px;
+  height: 250px;
+}
+
+.blob3 {
+  width: 300px;
+  height: 300px;
+}
+
+.blob4 {
+  width: 400px;
+  height: 400px;
 }
