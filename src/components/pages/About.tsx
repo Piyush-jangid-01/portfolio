@@ -57,6 +57,22 @@ const About = () => {
     damping: 20,
   });
 
+  const textY = useTransform(progress, [0, 0.75], ["-150px", "-250px"]);
+  const strokeWidth = 4;
+
+  const fillOpacity = useTransform(progress, [0.15, 0.45], [0, 1]);
+
+  const titleColor = useTransform(
+    progress,
+    [0.95, 1],
+    ["rgba(255,255,255,0)", "rgba(255,255,255,1)"],
+  );
+
+  const smoothStroke = useSpring(strokeWidth, {
+    stiffness: 55,
+    damping: 18,
+  });
+
   return (
     <section ref={ref} className="about-section" id="about">
       <motion.img
@@ -90,6 +106,57 @@ const About = () => {
         aria-hidden="true"
         style={{ x: blob4X, y: blob4Y, opacity, scale, rotate: -23 }}
       />
+      <motion.div
+        className="about-content"
+        style={{
+          opacity,
+          scale,
+          y: textY,
+        }}
+      >
+        <motion.h2
+          className="about-title"
+          style={{
+            WebkitTextStrokeWidth: smoothStroke,
+            WebkitTextStrokeColor: "#ffffff",
+            opacity: fillOpacity,
+            color: titleColor,
+          }}
+        >
+          ABOUT ME
+        </motion.h2>
+
+        <p className="about-text">
+          I’m a computer science student and web developer with hands-on
+          experience across different areas of web development. I enjoy building
+          applications that are clean, functional, and easy to use.
+        </p>
+
+        <p className="about-text">
+          My experience spans frontend and backend technologies, allowing me to
+          understand how different parts of an application work together. I
+          focus on clean code, problem solving, and continuous learning through
+          projects.
+        </p>
+        <div className="btn">
+          <button
+            className="contact-btn"
+            onMouseMove={(e) => {
+              const rect = e.currentTarget.getBoundingClientRect();
+              e.currentTarget.style.setProperty(
+                "--x",
+                `${e.clientX - rect.left}px`,
+              );
+              e.currentTarget.style.setProperty(
+                "--y",
+                `${e.clientY - rect.top}px`,
+              );
+            }}
+          >
+            Contact Me
+          </button>
+        </div>
+      </motion.div>
     </section>
   );
 };
