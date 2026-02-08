@@ -8,6 +8,7 @@ import image3 from "../../assets/image3.png";
 import image4 from "../../assets/image4.png";  
 import "./Home.css";
 import About from "./About";
+import Skills from "./Skills";
 
 const Home = () => {
   useEffect(() => {
@@ -91,6 +92,9 @@ const Home = () => {
       <section style={{height: "53vh"}}></section>
       <section  className="about-section" id="about">
         <About />
+      </section>
+      <section className="skill-section" id="skills">
+         <Skills />
       </section>
        
     </>
