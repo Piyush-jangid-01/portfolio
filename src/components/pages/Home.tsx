@@ -9,6 +9,8 @@ import image4 from "../../assets/image4.png";
 import "./Home.css";
 import About from "./About";
 import Skills from "./Skills";
+import Projects from "./Projects";
+import Contact from "./Contact";
 
 const Home = () => {
   useEffect(() => {
@@ -95,6 +97,13 @@ const Home = () => {
       </section>
       <section className="skill-section" id="skills">
          <Skills />
+      </section>
+      <section className="projects-section" id="projects">
+         <Projects />
+      </section>
+
+      <section className="contacts-section" id="contact">
+        <Contact />
       </section>
        
     </>

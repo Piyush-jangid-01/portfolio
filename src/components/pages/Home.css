@@ -175,3 +175,11 @@
     margin: 0 auto;
   }
 }
+
+.projects-section {
+  z-index: 1;
+}
+
+.contacts-section {
+ z-index: 0;
+}

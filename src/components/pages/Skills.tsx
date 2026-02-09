@@ -12,13 +12,13 @@ const Skills = () => {
   });
 
   /* ---- SAME FEEL AS BLOBS ---- */
-  const rawOpacity = useTransform(scrollYProgress, [0, 0.25, 0.5], [0, 0.6, 1]);
+  const rawOpacity = useTransform(scrollYProgress, [0, 0.25, 0.5], [0, 0.2, 1]);
   const opacity = useSpring(rawOpacity, { stiffness: 80, damping: 20 });
 
   const rawY = useTransform(scrollYProgress, [0, 0.5], [60, 0]);
   const y = useSpring(rawY, { stiffness: 80, damping: 20 });
 
-  const rawScale = useTransform(scrollYProgress, [0, 0.5], [0.96, 1]);
+  const rawScale = useTransform(scrollYProgress, [0, 0.5], [0.9, 1]);
   const scale = useSpring(rawScale, { stiffness: 80, damping: 20 });
 
   return (
@@ -32,15 +32,15 @@ const Skills = () => {
         }}
       >
         <MagicBento
-          textAutoHide
-          enableStars
-          enableSpotlight
-          enableBorderGlow
-          enableTilt={false}
-          enableMagnetism={false}
+          textAutoHide={true}
+          enableStars={true}
+          enableSpotlight={true}
+          enableBorderGlow={true}
+          enableTilt={true}
+          enableMagnetism={true}
           clickEffect
-          spotlightRadius={400}
-          particleCount={12}
+          spotlightRadius={200}
+          particleCount={300}
           glowColor="132, 0, 255"
           disableAnimations={false}
         />

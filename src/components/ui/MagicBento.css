@@ -35,7 +35,7 @@
   /* ❌ REMOVE aspect-ratio */
 }
 
-.magic-bento-card:hover {
+.magic-bento-card {
   transform: translateY(-4px);
   box-shadow:
     0 10px 30px rgba(0, 0, 0, 0.4),
@@ -101,15 +101,17 @@
 /* ---- BORDER GLOW ---- */
 
 .magic-bento-card--border-glow::after {
-  content: '';
+    content: '';
   position: absolute;
   inset: 0;
   padding: 6px;
   border-radius: inherit;
 
+  /* 🔥 BASE + REACTIVE GLOW */
   background: radial-gradient(
-    300px circle at var(--glow-x, 50%) var(--glow-y, 50%),
-    rgba(132, 0, 255, calc(var(--glow-intensity, 0) * 0.8)),
+    320px circle at var(--glow-x, 50%) var(--glow-y, 50%),
+    rgba(132, 0, 255, calc(0.35 + var(--glow-intensity, 0) * 0.65)),
+    rgba(132, 0, 255, 0.15),
     transparent 70%
   );
 
@@ -120,8 +122,24 @@
 
   pointer-events: none;
   z-index: 1;
+
+   animation: borderPulse 3s ease-in-out infinite;
 }
 
+@keyframes borderPulse {
+  0% {
+    opacity: 0.6;
+    filter: blur(6px);
+  }
+  50% {
+    opacity: 1;
+    filter: blur(10px);
+  }
+  100% {
+    opacity: 0.6;
+    filter: blur(6px);
+  }
+}
 /* ---------- BIG CARD ENHANCEMENTS ---------- */
 
 .bento-divider {
