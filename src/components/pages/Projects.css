@@ -1,7 +1,7 @@
 .projects-section {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 80vh;
   background: linear-gradient(180deg, #140020c1, #000000);
   color: white;
   overflow: visible;
@@ -14,7 +14,7 @@
 .project-card {
   height: 20rem;
   padding: 3rem;
-  border-radius: 40px;
+  border-radius: 25px;
   color: white;
   display: flex;
   flex-direction: row;
@@ -43,6 +43,7 @@
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
+  margin-bottom: 5px;
 }
 
 .tech-stack span {
@@ -79,6 +80,7 @@
 }
 .final {
   background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  width: 100%;
 }
 
 .project-card h2 {
@@ -167,6 +169,6 @@
 }
 
 .tech{
-    position: relative;
-    top: -29px;
+  position: relative;
+  top: -12px;
 }
