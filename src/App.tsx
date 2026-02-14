@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Squares from "./components/background/Squares";
 import Hero from "./components/pages/Hero";
-import Home from "./components/pages/home";
+import Home from "./components/pages/Home";
 
 type Page = "hero" | "home";
 
@@ -27,11 +27,6 @@ function App() {
     setPage("home");
   };
 
-  const goHero = () => {
-    window.history.pushState({}, "", "/");
-    setPage("hero");
-  };
-
   return (
     <>
       {page === "hero" && (
@@ -46,7 +41,7 @@ function App() {
         </Squares>
       )}
 
-      {page === "home" && <Home onBack={goHero} />}
+      {page === "home" && <Home/>}
     </>
   );
 }
