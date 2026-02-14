@@ -1,73 +1,154 @@
-# React + TypeScript + Vite
+🚀 Piyush Jangid – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, animated developer portfolio built to showcase my projects, skills, and experience with a strong focus on interactive UI, smooth animations, and clean architecture.
 
-Currently, two official plugins are available:
+🔗 Live Portfolio: #
+📂 Source Code: [this repository](https://github.com/Piyush-jangid-01/portfolio)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+✨ Features
 
-## React Compiler
+⚡ Smooth scroll-based animations using Framer Motion
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+🎨 Creative UI components and interactive effects
 
-## Expanding the ESLint configuration
+🧠 Clean section-based layout (Home, About, Skills, Projects, Contact)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+📱 Fully responsive across devices
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+📩 Working contact form with EmailJS
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+🌀 Custom animated components (ScrollVelocity, TiltedCard, BubbleMenu, etc.)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+🛠 Tech Stack
+Frontend
+
+React.js
+
+TypeScript
+
+CSS3
+
+Framer Motion (scroll & reveal animations)
+
+Utilities & Tools
+
+EmailJS – contact form email handling
+
+Custom UI components – reusable animation-driven components
+
+Vite / React tooling (depending on your setup)
+
+📂 Sections Overview
+🏠 Home
+
+Hero section with animated typography
+
+Interactive “Contact Me” button
+
+Custom tilted avatar card
+
+👤 About
+
+Scroll-based reveal animations
+
+Floating background blobs
+
+Animated stroke-to-fill text effect
+
+🧩 Skills
+
+Structured skill categories
+
+Clean visual hierarchy
+
+Animation-driven presentation
+
+💼 Projects
+
+Featured projects include:
+
+FlowDesk – productivity-focused interface
+
+InterviewMate – AI-powered mock interview platform
+
+Productivity Hub – multi-tool web app (Vanilla JS)
+
+Ibiki – clothing brand landing page
+
+Each project highlights:
+
+Description
+
+Tech stack
+
+GitHub & live links
+
+📬 Contact
+
+Animated split layout (image + form)
+
+Form validation
+
+Real email delivery using EmailJS
+
+Smooth reveal on scroll
+
+📩 Contact Form (How it works)
+
+Uses EmailJS (no backend required)
+
+Sends emails directly from the frontend
+
+Validates inputs before submission
+
+Displays success/error feedback
+
+🧠 What I Focus On
+
+Clean, maintainable React components
+
+Animation that enhances UX (not distracts)
+
+Real-world project structure
+
+Performance-conscious UI design
+
+Continuous learning through building
+
+🚀 Getting Started (Run Locally)
+```bash
+# Clone the repository
+git clone https://github.com/your-username/portfolio.git
+
+# Navigate into the project
+cd portfolio
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🔮 Future Improvements
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Dark/light theme toggle
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Accessibility improvements (ARIA, keyboard navigation)
+
+Performance optimization
+
+More case-study style project pages
+
+📜 License
+
+This project is open-source and available for learning and inspiration.
+Feel free to explore, fork, and adapt — just give credit where due 🙂
+
+🙌 Acknowledgements
+
+Inspiration from modern UI/UX portfolios
+
+Open-source animation & UI communities
+
+Everyone who reviewed and gave feedback
