@@ -2,7 +2,7 @@
 
 A modern, animated developer portfolio built to showcase my projects, skills, and experience — with a strong focus on interactive UI, smooth animations, and clean architecture.
 
-🔗 **Live Portfolio:** #  
+🔗 **Live Portfolio:** https://portfolio-teal-eight-mbtq40deii.vercel.app/  
 📂 **Source Code:** https://github.com/Piyush-jangid-01/portfolio
 
 ---
