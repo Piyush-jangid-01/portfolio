@@ -37,11 +37,7 @@ const Contact = () => {
   const progress = scrollYProgress;
 
   /* -------------------- FADE + SCALE -------------------- */
-  const rawOpacity = useTransform(
-    progress,
-    [0, 0.1, 0.3, 0.4],
-    [0, 0, 0.90, 1]
-  );
+  const rawOpacity = useTransform(progress, [0, 0.1, 0.3, 0.4], [0, 0, 0.9, 1]);
 
   const opacity = useSpring(rawOpacity, {
     stiffness: 90,
@@ -52,7 +48,7 @@ const Contact = () => {
   const rawScale = useTransform(
     progress,
     [0, 0.2, 0.45, 0.7],
-    [0.9, 0.93, 0.97, 1]
+    [0.9, 0.93, 0.97, 1],
   );
 
   const scale = useSpring(rawScale, {
@@ -74,15 +70,15 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_76iyswo",
-        "template_atwxl39",
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
         {
           first_name: formData.firstName,
           last_name: formData.lastName,
           email: formData.email,
           message: formData.message,
         },
-        "r5YiIsdb36lHA5gVB"
+        import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
       )
       .then(() => {
         setSubmitSuccess(true);
@@ -103,11 +99,8 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref}  className="contacts-section">
-      <motion.div
-        className="contact-container"
-        style={{ opacity, scale, y }}
-      >
+    <section ref={ref} className="contacts-section">
+      <motion.div className="contact-container" style={{ opacity, scale, y }}>
         {/* ---------------- IMAGE ---------------- */}
         <motion.div
           className="contact-left image-panel"
@@ -117,7 +110,10 @@ const Contact = () => {
         </motion.div>
 
         {/* ---------------- FORM ---------------- */}
-        <motion.div className="contact-right" style={{opacity, scale: imageScale, y: imageY,}}>
+        <motion.div
+          className="contact-right"
+          style={{ opacity, scale: imageScale, y: imageY }}
+        >
           <div className="animated-background">
             <div className="glow-orb orb-1" />
             <div className="glow-orb orb-2" />
@@ -190,8 +186,8 @@ const Contact = () => {
                 {isSubmitting
                   ? "Sending…"
                   : submitSuccess
-                  ? "Message Sent"
-                  : "Send Message"}
+                    ? "Message Sent"
+                    : "Send Message"}
               </button>
             </form>
           </div>
