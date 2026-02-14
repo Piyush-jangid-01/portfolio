@@ -189,13 +189,15 @@ export default function BubbleMenu({
         aria-label="Main navigation"
       >
         <div className="bubble logo-bubble" aria-label="Logo">
-          <span className="logo-content">
-            {typeof logo === "string" ? (
-              <img src={logo} alt="Logo" className="bubble-logo" />
-            ) : (
-              logo
-            )}
-          </span>
+          <a href="/home#contact">
+            <span className="logo-content">
+              {typeof logo === "string" ? (
+                <img src={logo} alt="Logo" className="bubble-logo" />
+              ) : (
+                logo
+              )}
+            </span>
+          </a>
         </div>
 
         <button

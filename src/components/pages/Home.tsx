@@ -5,8 +5,9 @@ import avatar from "../../assets/avatar.png";
 import image1 from "../../assets/image1.png";
 import image2 from "../../assets/image2.png";
 import image3 from "../../assets/image3.png";
-import image4 from "../../assets/image4.png";  
+import image4 from "../../assets/image4.png";
 import "./Home.css";
+
 import About from "./About";
 import Skills from "./Skills";
 import Projects from "./Projects";
@@ -21,6 +22,7 @@ const Home = () => {
 
   return (
     <>
+      {/* -------------------- HERO -------------------- */}
       <section id="home" className="home">
         <h1 className="home-title">
           Hi, I’m <span>Piyush</span>
@@ -52,26 +54,41 @@ const Home = () => {
               displayOverlayContent={false}
             />
           </div>
+          <a href="#contact">
           <div className="home-right">
             <button
               className="home-contact-btn"
-              onMouseMove={(e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                e.currentTarget.style.setProperty(
-                  "--x",
-                  `${e.clientX - rect.left}px`,
-                );
-                e.currentTarget.style.setProperty(
-                  "--y",
-                  `${e.clientY - rect.top}px`,
-                );
+              onClick={() => {
+                const target = document.querySelector(
+                  "section.contacts-section",
+                ) as HTMLElement | null;
+
+                const scroller = document.querySelector(
+                  ".scroll-stack-scroller",
+                ) as HTMLElement | null;
+
+                if (!target || !scroller) {
+                  console.warn("Target or scroller not found");
+                  return;
+                }
+
+                const top =
+                  target.getBoundingClientRect().top + scroller.scrollTop;
+
+                scroller.scrollTo({
+                  top,
+                  behavior: "smooth",
+                });
               }}
             >
-              Contact Me
+               Contact Me
             </button>
           </div>
+          </a>
         </div>
       </section>
+
+      {/* -------------------- MARQUEE -------------------- */}
       <section className="sec1">
         <ScrollVelocity
           items={[
@@ -82,7 +99,7 @@ const Home = () => {
               images: [image1, image2, image3, image4],
               imageWidth: 350,
               imageHeight: 230,
-            }
+            },
           ]}
           velocity={100}
           damping={50}
@@ -91,21 +108,28 @@ const Home = () => {
           velocityMapping={{ input: [0, 1000], output: [0, 5] }}
         />
       </section>
-      <section style={{height: "53vh"}}></section>
-      <section  className="about-section" id="about">
+
+      <section style={{ height: "53vh" }} />
+
+      {/* -------------------- ABOUT -------------------- */}
+      <section className="about-section" id="about">
         <About />
       </section>
+
+      {/* -------------------- SKILLS -------------------- */}
       <section className="skill-section" id="skills">
-         <Skills />
-      </section>
-      <section className="projects-section" id="projects">
-         <Projects />
+        <Skills />
       </section>
 
+      {/* -------------------- PROJECTS -------------------- */}
+      <section className="projects-section" id="projects">
+        <Projects />
+      </section>
+
+      {/* -------------------- CONTACT (ONLY ID HERE) -------------------- */}
       <section className="contacts-section" id="contact">
         <Contact />
       </section>
-       
     </>
   );
 };

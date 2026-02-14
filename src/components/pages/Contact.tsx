@@ -65,7 +65,7 @@ const Contact = () => {
 
   /* -------------------- IMAGE PARALLAX -------------------- */
   const imageY = useTransform(progress, [0, 1], ["120px", "0px"]);
-  const imageScale = useTransform(progress, [0, 1], [0.92, 1]);
+  const imageScale = useTransform(progress, [0, 1], [0.98, 1]);
 
   /* -------------------- SUBMIT -------------------- */
   const handleSubmit = (e: React.FormEvent) => {
@@ -103,7 +103,7 @@ const Contact = () => {
   };
 
   return (
-    <section ref={ref} id="contact" className="contacts-section">
+    <section ref={ref}  className="contacts-section">
       <motion.div
         className="contact-container"
         style={{ opacity, scale, y }}
@@ -119,8 +119,6 @@ const Contact = () => {
         {/* ---------------- FORM ---------------- */}
         <motion.div className="contact-right" style={{opacity, scale: imageScale, y: imageY,}}>
           <div className="animated-background">
-            <div className="glow-line line-1" />
-            <div className="glow-line line-2" />
             <div className="glow-orb orb-1" />
             <div className="glow-orb orb-2" />
           </div>

@@ -153,7 +153,7 @@ const About = () => {
               );
             }}
           >
-            Contact Me
+           <a href="#contact">Contact Me</a>
           </button>
         </div>
       </motion.div>
