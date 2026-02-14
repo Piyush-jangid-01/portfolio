@@ -1,124 +1,100 @@
-🚀 Piyush Jangid – Developer Portfolio
+# 🚀  Developer Portfolio
 
-A modern, animated developer portfolio built to showcase my projects, skills, and experience with a strong focus on interactive UI, smooth animations, and clean architecture.
+A modern, animated developer portfolio built to showcase my projects, skills, and experience — with a strong focus on interactive UI, smooth animations, and clean architecture.
 
-🔗 Live Portfolio: #
-📂 Source Code: [this repository](https://github.com/Piyush-jangid-01/portfolio)
+🔗 **Live Portfolio:** #  
+📂 **Source Code:** https://github.com/Piyush-jangid-01/portfolio
 
-✨ Features
+---
 
-⚡ Smooth scroll-based animations using Framer Motion
+## ✨ Features
 
-🎨 Creative UI components and interactive effects
+- ⚡ Smooth scroll-based animations using **Framer Motion**
+- 🎨 Creative UI components and interactive effects
+- 🧠 Clean section-based layout (Home, About, Skills, Projects, Contact)
+- 📱 Fully responsive across all devices
+- 📩 Working contact form with **EmailJS**
+- 🌀 Custom animated components  
+  *(ScrollVelocity, TiltedCard, BubbleMenu, etc.)*
 
-🧠 Clean section-based layout (Home, About, Skills, Projects, Contact)
+---
 
-📱 Fully responsive across devices
+## 🛠 Tech Stack
 
-📩 Working contact form with EmailJS
+### Frontend
+- React.js  
+- TypeScript  
+- CSS3  
+- Framer Motion (scroll & reveal animations)
 
-🌀 Custom animated components (ScrollVelocity, TiltedCard, BubbleMenu, etc.)
+### Utilities & Tools
+- EmailJS – contact form email handling
+- Custom UI components – reusable animation-driven components
+- Vite / React tooling
 
-🛠 Tech Stack
-Frontend
+---
 
-React.js
+## 📂 Sections Overview
 
-TypeScript
+### 🏠 Home
+- Hero section with animated typography
+- Interactive **“Contact Me”** button
+- Custom tilted avatar card
 
-CSS3
+### 👤 About
+- Scroll-based reveal animations
+- Floating background blobs
+- Animated stroke-to-fill text effect
 
-Framer Motion (scroll & reveal animations)
+### 🧩 Skills
+- Structured skill categories
+- Clean visual hierarchy
+- Animation-driven presentation
 
-Utilities & Tools
-
-EmailJS – contact form email handling
-
-Custom UI components – reusable animation-driven components
-
-Vite / React tooling (depending on your setup)
-
-📂 Sections Overview
-🏠 Home
-
-Hero section with animated typography
-
-Interactive “Contact Me” button
-
-Custom tilted avatar card
-
-👤 About
-
-Scroll-based reveal animations
-
-Floating background blobs
-
-Animated stroke-to-fill text effect
-
-🧩 Skills
-
-Structured skill categories
-
-Clean visual hierarchy
-
-Animation-driven presentation
-
-💼 Projects
-
+### 💼 Projects
 Featured projects include:
-
-FlowDesk – productivity-focused interface
-
-InterviewMate – AI-powered mock interview platform
-
-Productivity Hub – multi-tool web app (Vanilla JS)
-
-Ibiki – clothing brand landing page
+- **FlowDesk** – productivity-focused interface  
+- **InterviewMate** – AI-powered mock interview platform  
+- **Productivity Hub** – multi-tool web app (Vanilla JS)  
+- **Ibiki** – clothing brand landing page  
 
 Each project highlights:
+- Description
+- Tech stack
+- GitHub & live links
 
-Description
+### 📬 Contact
+- Animated split layout (image + form)
+- Form validation
+- Real email delivery using **EmailJS**
+- Smooth reveal on scroll
 
-Tech stack
+---
 
-GitHub & live links
+## 📩 Contact Form – How It Works
 
-📬 Contact
+- Uses **EmailJS** (no backend required)
+- Sends emails directly from the frontend
+- Validates inputs before submission
+- Displays success/error feedback
 
-Animated split layout (image + form)
+---
 
-Form validation
+## 🧠 What I Focus On
 
-Real email delivery using EmailJS
+- Clean, maintainable React components
+- Animations that enhance UX (not distract)
+- Real-world project structure
+- Performance-conscious UI design
+- Continuous learning through building
 
-Smooth reveal on scroll
+---
 
-📩 Contact Form (How it works)
+## 🚀 Getting Started (Run Locally)
 
-Uses EmailJS (no backend required)
-
-Sends emails directly from the frontend
-
-Validates inputs before submission
-
-Displays success/error feedback
-
-🧠 What I Focus On
-
-Clean, maintainable React components
-
-Animation that enhances UX (not distracts)
-
-Real-world project structure
-
-Performance-conscious UI design
-
-Continuous learning through building
-
-🚀 Getting Started (Run Locally)
 ```bash
 # Clone the repository
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/Piyush-jangid-01/portfolio.git
 
 # Navigate into the project
 cd portfolio
@@ -129,26 +105,3 @@ npm install
 # Start development server
 npm run dev
 ```
-
-🔮 Future Improvements
-
-Dark/light theme toggle
-
-Accessibility improvements (ARIA, keyboard navigation)
-
-Performance optimization
-
-More case-study style project pages
-
-📜 License
-
-This project is open-source and available for learning and inspiration.
-Feel free to explore, fork, and adapt — just give credit where due 🙂
-
-🙌 Acknowledgements
-
-Inspiration from modern UI/UX portfolios
-
-Open-source animation & UI communities
-
-Everyone who reviewed and gave feedback
